@@ -1,0 +1,7 @@
+inventory_name:
+  hosts:
+      10.223.10.20:
+        ansible_connection: ssh
+        ansible_user: testtool
+        ansible_become: yes
+        ansible_become_method: sudo

@@ -1,0 +1,18 @@
+--- 
+# Software Installation and Configuration script
+- name: Install software
+  debug:
+    msg: "Task - Install Required Software"
+
+- name: Install routes library
+  shell: |
+    pip install routes
+  become: yes
+
+- name: Copy Files 
+  copy:
+    src: /Users/nsivakumar/ansible_plays/Ansible/check.txt
+    dest: /homes/testtool/nsivakumar/
+    owner: '{{ root_user }}'
+    group: '{{ user_group }}'
+    mode: 0550
